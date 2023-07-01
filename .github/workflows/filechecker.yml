@@ -18,4 +18,4 @@ jobs:
       - name: List of files [detected]
         run: |
           ls ${{ github.workspace }}
-      - run: echo "Workflow status: ${{ job.status }}"
+      - run: echo "Run declared as ${{ job.status }}"
