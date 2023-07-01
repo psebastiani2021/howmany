@@ -8,5 +8,24 @@ If you don't have or can't install this framework, you can try online C# compile
  - [Sololearn](https://https://www.sololearn.com/compiler-playground/csharp)
  - [Dotnetfiddle](https://dotnetfiddle.net/srx9kM) (requires public statements)
 
+### Additional compiling resources
+If you can't access none of the three online C# compilers, you can open Microsoft PowerShell (used in Windows) and write a continuation prompt without nothing in the initial. Remember that for every line of code, you should open a new continuation prompt. ([see an example here](https://github.com/psebastiani2021/howmany/blob/main/interop/running.ps1))
+```shell
+$id = Get-Random
+$code = @"
+using System;
+namespace PowerShell {
+   public class Program$id {
+	public static void Main(){
+	 Console.WriteLine("C# in .ps1");
+  }
+ }
+}
+"@
+
+Add-Type -TypeDefinition $code -Language CSharp	
+iex "[PowerShell.Program$id]::Main()"
+```
+This example simply outputs a "Hello World!" in the PowerShell console.
 ## Contributing
 If you found an error in a code, update it, or you would like to share some ideas, feel free to do it through pull requests or issues.
