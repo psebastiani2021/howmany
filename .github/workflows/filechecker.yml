@@ -1,0 +1,21 @@
+name: C# Files Checker
+run-name: C# file check in repository
+on: 
+  push:
+    paths:
+      - '**.cs'
+jobs:
+  Compatibility:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Checking files in the repository"
+      - run: echo "Job running in ${{ runner.os }}"
+      - run: echo "Pushing to ${{ github.ref }} branch"
+      - name: Repository files overview
+        uses: actions/checkout@v3
+      - run: echo "Clonning"
+      - run: echo "Processing commit,¿"
+      - name: List of C# files [detected]
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "Workflow was ${{ job.status }}"
