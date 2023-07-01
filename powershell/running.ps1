@@ -1,15 +1,13 @@
 #!/bin/bash
-$id = get-random
+$id = Get-Random
 $code = @"
 using System;
-namespace PowerShell
-{
-	public class Program$id
-	{
-		public static void Main(){
-			Console.WriteLine();
-		}
-	}
+namespace PowerShell {
+   public class Program$id {
+	public static void Main(){
+	 Console.WriteLine("C# in .ps1");
+  }
+ }
 }
 "@
 
