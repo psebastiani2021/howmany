@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - run: echo "Clonning"
       - run: echo "Processing commit,¿"
-      - name: List of C# files [detected]
+      - name: List of files [detected]
         run: |
           ls ${{ github.workspace }}
-      - run: echo "Workflow was ${{ job.status }}"
+      - run: echo "Workflow status: ${{ job.status }}"
