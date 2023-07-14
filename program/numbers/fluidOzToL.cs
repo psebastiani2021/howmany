@@ -13,7 +13,6 @@ namespace fluidOuncesToLiters
 		{
 			double fluidOunces = Convert.ToDouble(Console.ReadLine());
             double liters = fluidOunces/33.814;
-            string plural = "are";
             Console.WriteLine("Enter the amount of fluid ounces: " + fluidOunces);
             Console.WriteLine(fluidOunces + " fluid ounces are equal to " + Math.Round(liters, 7) + " liters.");
  		}
