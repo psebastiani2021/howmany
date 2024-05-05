@@ -1,3 +1,4 @@
+**NOTE: The code here is for the console version howmany. A Windows Forms app is being developed (#1).**
 ## What is howmany?
 howmany (or howMany) is a console application that is able to measure a variety of things related to your personal information, text length, and more &mdash; everything with simple C# code.
 ## Instructions to run
